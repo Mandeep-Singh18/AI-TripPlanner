@@ -8,17 +8,15 @@ import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { FcGoogle } from "react-icons/fc";
 import { doc, setDoc } from "firebase/firestore";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import { parse } from 'postcss';
+import { useNavigate } from 'react-router-dom';
 
 function CreateTrip() {
   const [place, setPlace] = useState();
   const [formData, setFormData] = useState({});
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false)
-  const [name, setName] = useState("Pedro Duarte")
-  const [username, setUsername] = useState("@peduarte")
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -88,6 +86,7 @@ function CreateTrip() {
       userEmail: user?.email,
       id: docId
     })
+    navigate(`/view-trip/${docId}`);
   }
 
   const login = useGoogleLogin({

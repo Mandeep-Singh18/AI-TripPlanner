@@ -1,9 +1,8 @@
-import { useState } from 'react'
-
-import Button from './components/ui/button'
+import React from 'react'
 import { BrowserRouter, Routes, Route  } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import CreateTrip from './pages/CreateTrip'
+import ViewTrip from './view-trip/[tripId]'
 
 
 
@@ -14,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage/>} />
         <Route path="/create-trip" element={<CreateTrip/>} />
+        <Route path="/view-trip/:tripId" element={<ViewTrip/>} />
       </Routes>
     </BrowserRouter>
     </>
