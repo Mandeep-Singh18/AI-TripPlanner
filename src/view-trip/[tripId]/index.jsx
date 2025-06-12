@@ -1,4 +1,5 @@
 import Headerss from '@/components/custom/Headerss'
+import InfoSection from '@/components/custom/InfoSection';
 import { db } from '@/service/AIMODEL';
 import { doc, getDoc } from 'firebase/firestore';
 import React, { use, useEffect, useState } from 'react'
@@ -18,6 +19,7 @@ const getTripData = async () => {
     const docref = doc(db, 'UserTrips', tripId);
     const docSnap = await getDoc(docref);
     if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
         setTripData(docSnap.data());
         setLoading(false);
     } else {
@@ -31,8 +33,14 @@ const getTripData = async () => {
 return (
     <div>
     <Headerss />
-    <div>
+    <div className='p-10 md:px-20 lg:px-40 xl:px-56'>
         {/* Information Section */}
+        <InfoSection trip={tripData}/>
+        {/* Reccomended Hotels */}
+
+        {/* Daily Plan itenary */}
+
+        {/* footer */}
     </div>
     </div>
   )
