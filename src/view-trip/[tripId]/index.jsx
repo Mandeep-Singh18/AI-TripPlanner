@@ -1,4 +1,5 @@
 import Headerss from '@/components/custom/Headerss'
+import Hotels from '@/components/custom/Hotels';
 import InfoSection from '@/components/custom/InfoSection';
 import { db } from '@/service/AIMODEL';
 import { doc, getDoc } from 'firebase/firestore';
@@ -37,7 +38,7 @@ return (
         {/* Information Section */}
         <InfoSection trip={tripData}/>
         {/* Reccomended Hotels */}
-
+        <Hotels trip={tripData} />
         {/* Daily Plan itenary */}
 
         {/* footer */}
