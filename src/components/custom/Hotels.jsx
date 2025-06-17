@@ -4,8 +4,8 @@ function Hotels({trip}) {
   return (
     <div>
       <h2 className='font-bold text-xl mt-5'>Hotels Recommendation</h2>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
-        {trip?.tripData?.hotels?.map((hotel, index) => (
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5'>
+        {trip?.tripData?.map((hotel, index) => (
             <div className='hover:transition-all scale-105 cursor-pointer' key={index}>
                 <img className='rounded-lg w-full h-48 object-cover' src="/placeholder.jpg" alt="" />
                 <div className='my-2 flex flex-col gap-2'>

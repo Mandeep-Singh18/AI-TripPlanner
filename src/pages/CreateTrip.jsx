@@ -2,7 +2,7 @@ import Headerss from '@/components/custom/Headerss'
 import { AI_PROMPT, SelectBudgetOptions, SelectTravelList } from '@/constants/options';
 import { db, generateTravelPlan } from '@/service/AIMODEL';
 import { useGoogleLogin } from '@react-oauth/google';
-import axios from 'axios';
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { FcGoogle } from "react-icons/fc";
