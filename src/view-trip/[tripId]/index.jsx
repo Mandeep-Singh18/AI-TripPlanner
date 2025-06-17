@@ -1,6 +1,7 @@
 import Headerss from '@/components/custom/Headerss'
 import Hotels from '@/components/custom/Hotels';
 import InfoSection from '@/components/custom/InfoSection';
+import ItineraryPlaces from '@/components/custom/ItineraryPlaces';
 import { db } from '@/service/AIMODEL';
 import { doc, getDoc } from 'firebase/firestore';
 import React, { use, useEffect, useState } from 'react'
@@ -40,7 +41,7 @@ return (
         {/* Reccomended Hotels */}
         <Hotels trip={tripData} />
         {/* Daily Plan itenary */}
-
+        <ItineraryPlaces trip={tripData} />
         {/* footer */}
     </div>
     </div>
