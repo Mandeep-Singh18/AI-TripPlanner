@@ -35,11 +35,42 @@ const model = getGenerativeModel(ai, { model: "gemini-2.0-flash" });
 // Wrap in an async function so you can use await
 export async function generateTravelPlan(prompt) {
    try {
+        const structuredPrompt = `${prompt}
+         Please provide the response in the following JSON format:
+        {
+          "hotels": [
+            {
+              "HotelName": "string",
+              "HotelAddress": "string",
+              "Price": "string",
+              "descriptions": "string",
+              "rating": number,
+              "hotel_image_url": "string",
+              "geo_coordinates": {
+                "latitude": number,
+                "longitude": number
+              }
+            }
+          ],
+          "itinerary": [
+            {
+              "day": number,
+              "activities": [
+                {
+                  "time": "string",
+                  "activity": "string",
+                  "description": "string",
+                  "location": "string"
+                }
+              ]
+            }
+          ]
+        }`;
         const result = await model.generateContent({
             // The contents must be an array of content objects
             contents: [{
                 role: "user",
-                parts: [{ text: prompt }]
+                parts: [{ text: structuredPrompt }]
             }],
             generationConfig: {
                 temperature: 0.9,
