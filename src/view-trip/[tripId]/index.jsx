@@ -1,3 +1,4 @@
+import Footer from '@/components/custom/Footer';
 import Headerss from '@/components/custom/Headerss'
 import Hotels from '@/components/custom/Hotels';
 import InfoSection from '@/components/custom/InfoSection';
@@ -35,7 +36,7 @@ const getTripData = async () => {
 return (
     <div>
     <Headerss />
-    <div className='p-10 md:px-20 lg:px-40 xl:px-56'>
+    <div className='p-10 pb-0 md:px-20 lg:px-40 xl:px-56'>
         {/* Information Section */}
         <InfoSection trip={tripData}/>
         {/* Reccomended Hotels */}
@@ -43,6 +44,7 @@ return (
         {/* Daily Plan itenary */}
         <ItineraryPlaces trip={tripData} />
         {/* footer */}
+        <Footer trip={tripData}/>
     </div>
     </div>
   )
