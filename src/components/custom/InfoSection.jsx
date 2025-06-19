@@ -43,25 +43,28 @@ const InfoSection = ({ trip }) => {
   }, [trip]);
 
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg">
-      {loading ? (
-        <div className="animate-pulse bg-gray-200 h-64 w-full" />
-      ) : error ? (
-        <div className="bg-red-50 p-4 text-red-600">{error}</div>
-      ) : placePhoto ? (
-        <div className="relative h-64">
-          <img
-            src={placePhoto}
-            alt={trip?.userSelection?.location?.label}
-            className="w-full h-full object-cover"
-            onError={() => setError('Failed to load image')}
-          />
-        </div>
-      ) : (
-        <div className="bg-gray-100 p-4 text-gray-500">
-          No location information available
-        </div>
-      )}
+    <div>
+      <div className="relative overflow-hidden rounded-lg shadow-lg">
+        {loading ? (
+          <div className="animate-pulse bg-gray-200 h-64 w-full" />
+        ) : error ? (
+          <div className="bg-red-50 p-4 text-red-600">{error}</div>
+        ) : placePhoto ? (
+          <div className="relative h-64">
+            <img
+              src={placePhoto}
+              alt={trip?.userSelection?.location?.label}
+              className="w-full h-full object-cover"
+              onError={() => setError('Failed to load image')}
+            />
+          </div>
+        ) : (
+          <div className="bg-gray-100 p-4 text-gray-500">
+            No location information available
+          </div>
+        )}
+      </div>
+      <h2 className="mt-3 text-3xl font-bold">{trip?.userSelection?.location?.label}</h2>
     </div>
   );
 };
