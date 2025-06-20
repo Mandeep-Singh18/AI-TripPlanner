@@ -3,6 +3,7 @@ import Button from '../ui/Button'
 import UserAvatar from './UseAvatar';
 import { googleLogout } from '@react-oauth/google';
 import Buttonsx from '../ui/Button';
+import { Link } from 'react-router-dom';
 
 const Headerss = () => {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -19,7 +20,9 @@ const Headerss = () => {
       <img src="/logo.svg" alt="" />
       {user ?
         <div className='flex items-center gap-4'>
-            <button className='bg-white text-red-400 px-4 cursor-pointer py-2 rounded-full'>My Trips</button>
+            <Link to={'/my-trips'}>  
+              <button className='bg-white text-red-400 px-4 cursor-pointer py-2 rounded-full'>My Trips</button>
+            </Link>     
             <UserAvatar user={user} onLogout={handleLogout}/>
         </div> : <Buttonsx />}
     </div>
