@@ -2,7 +2,6 @@ import Headerss from '@/components/custom/Headerss';
 import UserTripCard from '@/components/custom/UserTripCard';
 import { db } from '@/service/AIMODEL';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { set } from 'mongoose';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
