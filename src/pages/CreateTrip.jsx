@@ -21,7 +21,6 @@ function CreateTrip() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // You can handle the form submission here
-    console.log({ name, username })
     setIsOpen(false)
   }
 
@@ -33,7 +32,7 @@ function CreateTrip() {
   }
 
   useEffect(() => {
-    console.log('Form Data:', formData);
+
   }, [formData]);
 
   const onGenerateTrip = async () => {
@@ -106,7 +105,6 @@ function CreateTrip() {
         accept: 'application/json'
       }
     }).then((response) => {
-      console.log('User Profile:', response.data);
       localStorage.setItem('user', JSON.stringify(response.data));
       setOpenDialog(false);
       onGenerateTrip();

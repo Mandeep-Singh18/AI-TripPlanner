@@ -22,7 +22,6 @@ const getTripData = async () => {
     const docref = doc(db, 'UserTrips', tripId);
     const docSnap = await getDoc(docref);
     if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
         setTripData(docSnap.data());
         setLoading(false);
     } else {

@@ -32,7 +32,6 @@ const Buttonsx = () => {
         accept: 'application/json'
       }
     }).then((response) => {
-      console.log('User Profile:', response.data);
       localStorage.setItem('user', JSON.stringify(response.data));
       setOpenDialog(false);
       window.location.reload(); // Reload to reflect user login state
