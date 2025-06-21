@@ -7,8 +7,8 @@ function Hotels({trip}) {
     <div>
       <h2 className='font-bold text-xl mt-5'>Hotels Recommendation</h2>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5'>
-        {trip?.tripData?.hotels?.map((hotel) => (
-            <HotelCardItem hotel={hotel}/>
+        {trip?.tripData?.hotels?.map((hotel, index) => (
+            <HotelCardItem hotel={hotel} key={hotel.id || index}/>
         ))}
       </div>
     </div>

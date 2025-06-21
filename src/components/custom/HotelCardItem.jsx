@@ -2,7 +2,7 @@ import { GetSearchPlaces } from '@/service/GlobalAPI';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function HotelCardItem({ hotel }) {
+function HotelCardItem({ hotel}) {
     const [placePhoto, setPlacePhoto] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
