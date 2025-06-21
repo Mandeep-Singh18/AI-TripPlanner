@@ -19,7 +19,7 @@ const Headerss = () => {
     <header className="bg-transparent shadow-md">
     <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
       <Link to="/" className="flex items-center gap-3">
-        <img src="/logo.svg" alt="Trip Planner Logo" className="h-10 w-10 rounded-full shadow" />
+        <img src="/logoicon.svg" alt="Trip Planner Logo" className="h-7 w-7" />
         <span className="font-extrabold text-xl tracking-tight text-gray-800 drop-shadow-lg hidden sm:inline">AI Trip Planner</span>
       </Link>
       {user ? (
