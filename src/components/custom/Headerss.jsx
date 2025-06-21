@@ -16,7 +16,7 @@ const Headerss = () => {
     window.location.reload();
   }
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-transparent shadow-md">
     <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
       <Link to="/" className="flex items-center gap-3">
         <img src="/logo.svg" alt="Trip Planner Logo" className="h-10 w-10 rounded-full shadow" />
