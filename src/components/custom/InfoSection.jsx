@@ -65,10 +65,16 @@ const InfoSection = ({ trip }) => {
         )}
       </div>
       <h2 className="mt-3 text-3xl font-bold">{trip?.userSelection?.location?.label}</h2>
-      <div className='flex gap-5 mt-3'>
-        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500'>📆{trip?.userSelection?.days} Days</h2>
-        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500'>💰{trip?.userSelection?.budget} Budget</h2>
-        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500'>🥂 No. of Traveler: {trip?.userSelection?.travelWith} People</h2>
+      <div className="flex flex-wrap gap-3 mt-3">
+        <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-sm sm:text-base">
+          📆 {trip?.userSelection?.days} Days
+        </h2>
+        <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-sm sm:text-base">
+          💰 {trip?.userSelection?.budget} Budget
+        </h2>
+        <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-sm sm:text-base">
+          🥂 No. of Traveler: {trip?.userSelection?.travelWith} People
+        </h2>
       </div>
     </div>
   );
