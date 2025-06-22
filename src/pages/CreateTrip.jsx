@@ -142,7 +142,7 @@ function CreateTrip() {
 
         <div className='mt-10'>
           <h2 className='text-xl my-3 font-medium'>what is your Budget?</h2>
-          <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-5'>
             {SelectBudgetOptions.map((item, index) => (
               <div key={index} className={`p-4 border rounded-lg hover:shadow-lg cursor-pointer
                 ${formData?.budget === item.title ? 'bg-gray-100' : ''}`
@@ -159,7 +159,7 @@ function CreateTrip() {
 
         <div className='mt-10'>
           <h2 className='text-xl my-3 font-medium'>who do you plan on travelling with on your next adventure?</h2>
-          <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-5'>
             {SelectTravelList.map((item, index) => (
               <div key={index} className={`p-4 border rounded-lg hover:shadow-lg cursor-pointer'
                 ${formData?.travelWith === item.people ? 'bg-gray-100' : ''}`}
@@ -173,7 +173,7 @@ function CreateTrip() {
           </div>
         </div>
 
-        <div className='my-10 justify-end flex'>
+        <div className='my-10 justify-center sm:justify-end flex'>
           <button disabled={loading}
             onClick={() => {
               const user = JSON.parse(localStorage.getItem('user'));
