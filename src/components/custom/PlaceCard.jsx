@@ -49,7 +49,7 @@ const PlaceCard = ({ place }) => {
       rel="noopener noreferrer"
       className="block"
     >
-      <div className='flex gap-5 items-center p-3 border border-gray-300 rounded-xl shadow-sm hover:scale-105 transition-all cursor-pointer hover:shadow-md'>
+      <div className='flex gap-5 bg-gray-100 items-center p-3 rounded-xl shadow-sm hover:scale-105 transition-all cursor-pointer hover:shadow-md'>
         {loading ? (
           <div className="h-[130px] w-[130px] rounded-xl bg-gray-200 animate-pulse" />
         ) : (

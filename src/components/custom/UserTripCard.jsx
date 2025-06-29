@@ -44,7 +44,7 @@ function UserTripCard({ trip }) {
     }, [trip]);
     return (
         <Link to={`/view-trip/${trip?.id}`} className='w-full h-full'>
-            <div className='hover:scale-105 transition-all'>
+            <div className='hover:scale-105 transition-all bg-gray-100 rounded-lg shadow-sm p-4 flex flex-col gap-3 cursor-pointer'>
                 <div className="w-full h-[200px] overflow-hidden rounded-xl">
                     <img
                         src={placePhoto ? placePhoto : '/placeholder.jpg'}

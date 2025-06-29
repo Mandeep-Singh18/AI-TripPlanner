@@ -48,7 +48,7 @@ function HotelCardItem({ hotel}) {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div className='hover:scale-105 transition-all cursor-pointer p-4 bg-white rounded-lg shadow-sm'>
+            <div className='hover:scale-105 bg-gray-100 transition-all cursor-pointer p-4 rounded-lg shadow-sm'>
                 {loading ? (
                     <div className="animate-pulse bg-gray-200 h-48 w-full rounded-lg" />
                 ) : (

@@ -50,7 +50,7 @@ const Buttonsx = () => {
           }
         }}
         className='cursor-pointer bg-white text-indigo-600 font-semibold px-5 py-2 rounded-full shadow hover:bg-indigo-50 hover:text-indigo-700 transition'>
-        {loading ? <AiOutlineLoading3Quarters className='h-7 w-7 animate-spin' /> : 'Sign In'}
+        {loading ? <AiOutlineLoading3Quarters className='h-7 w-7 animate-spin' /> : "SignIn"}
       </button>
 
       {isOpen && (
